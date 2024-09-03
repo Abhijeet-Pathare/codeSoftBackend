@@ -31,4 +31,9 @@ public class CourseService {
         return courseRepository.save(course);
 		
 	}
+
+	public List<Course> findByCourseNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String keyword,
+			String keyword2) {
+		return courseRepository.findByCourseNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(keyword,keyword);
+	}
 }
